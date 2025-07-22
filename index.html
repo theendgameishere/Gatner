@@ -72,9 +72,9 @@
     <style>
         :root{ --dark:#111827; --dark-2:#1F2937; --accent:#FBBF24; }
         html, body { overflow-x: hidden; } /* FIX: Prevents horizontal scroll */
-        body{ font-family:'Roboto',sans-serif; background-color:var(--dark); color:#e5e7eb; position: relative; }
+        body{ font-family:'Roboto',sans-serif; background-color:var(--dark); color:#e5e7eb; position: relative; padding-top: 80px; /* Prevent content from jumping behind fixed nav */}
         h1, h2, h3, h4, p, a, strong, span, li, summary, label, input, textarea, button { color: inherit; }
-        .hero-section{ position:relative; background-color:var(--dark); min-height: calc(100vh - 150px); display: flex; flex-direction: column; justify-content: center; padding-top: 80px; }
+        .hero-section{ position:relative; background-color:var(--dark); min-height: calc(100vh - 150px); display: flex; flex-direction: column; justify-content: center; padding-top: 0; /* Adjusted for fixed nav */ }
         .wave-divider{ position:absolute; bottom:-1px; left:0; width:100%; overflow:hidden; line-height:0; transform:rotate(180deg); }
         .wave-divider svg{ display:block; width:calc(100% + 1.3px); height:150px; }
         .wave-divider .shape-fill{ fill:var(--dark-2); }
@@ -99,7 +99,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background-color: rgba(31, 41, 55, 0.8);
+            background-color: rgba(17, 24, 39, 0.8); /* Darker, more solid background */
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             transition: top 0.3s;
@@ -111,13 +111,14 @@
 
 <nav id="main-nav" class="py-4">
     <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="#home" class="text-2xl font-bold gradient-text">Garner Electric</a>
+        <a href="index.html#home" class="text-2xl font-bold gradient-text">Garner Electric</a>
         <div class="hidden md:flex items-center space-x-8">
-            <a href="/index.html#services" class="text-lg hover:text-amber-400 transition-colors">Services</a>
-            <a href="/index.html#trust" class="text-lg hover:text-amber-400 transition-colors">About</a>
-            <a href="/blog.html" class="text-lg hover:text-amber-400 transition-colors">Blog</a>
-            <a href="#contact" class="cta-button bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-full text-lg shadow-lg hover:bg-amber-400">Contact</a>
+            <a href="index.html#services" class="text-lg hover:text-amber-400 transition-colors">Services</a>
+            <a href="index.html#trust" class="text-lg hover:text-amber-400 transition-colors">About</a>
+            <a href="blog.html" class="text-lg hover:text-amber-400 transition-colors">Blog</a>
+            <a href="index.html#contact" class="cta-button bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-full text-lg shadow-lg hover:bg-amber-400">Contact</a>
         </div>
+        <!-- Mobile menu button can be added here if needed -->
     </div>
 </nav>
 
@@ -210,7 +211,6 @@
         </div>
     </section>
 
-    <!-- The rest of the page remains the same -->
     <section class="py-20" id="testimonials">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
