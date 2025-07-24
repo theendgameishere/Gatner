@@ -72,9 +72,9 @@
     <style>
         :root{ --dark:#111827; --dark-2:#1F2937; --accent:#FBBF24; }
         html, body { overflow-x: hidden; } /* FIX: Prevents horizontal scroll */
-        body{ font-family:'Roboto',sans-serif; background-color:var(--dark); color:#e5e7eb; position: relative; padding-top: 80px; /* Prevent content from jumping behind fixed nav */}
+        body{ font-family:'Roboto',sans-serif; background-color:var(--dark); color:#e5e7eb; position: relative; }
         h1, h2, h3, h4, p, a, strong, span, li, summary, label, input, textarea, button { color: inherit; }
-        .hero-section{ position:relative; background-color:var(--dark); min-height: calc(100vh - 150px); display: flex; flex-direction: column; justify-content: center; padding-top: 0; /* Adjusted for fixed nav */ }
+        .hero-section{ position:relative; background-color:var(--dark); min-height: calc(100vh - 150px); display: flex; flex-direction: column; justify-content: center; padding-top: 80px; }
         .wave-divider{ position:absolute; bottom:-1px; left:0; width:100%; overflow:hidden; line-height:0; transform:rotate(180deg); }
         .wave-divider svg{ display:block; width:calc(100% + 1.3px); height:150px; }
         .wave-divider .shape-fill{ fill:var(--dark-2); }
@@ -99,7 +99,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background-color: rgba(17, 24, 39, 0.8); /* Darker, more solid background */
+            background-color: rgba(31, 41, 55, 0.8);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             transition: top 0.3s;
@@ -111,20 +111,18 @@
 
 <nav id="main-nav" class="py-4">
     <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="index.html#home" class="text-2xl font-bold gradient-text">Garner Electric</a>
+        <a href="#home" class="text-2xl font-bold gradient-text">Garner Electric</a>
         <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html#services" class="text-lg hover:text-amber-400 transition-colors">Services</a>
-            <a href="index.html#trust" class="text-lg hover:text-amber-400 transition-colors">About</a>
-            <a href="blog.html" class="text-lg hover:text-amber-400 transition-colors">Blog</a>
-            <a href="index.html#contact" class="cta-button bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-full text-lg shadow-lg hover:bg-amber-400">Contact</a>
+            <a href="/index.html#services" class="text-lg hover:text-amber-400 transition-colors">Services</a>
+            <a href="/index.html#trust" class="text-lg hover:text-amber-400 transition-colors">About</a>
+            <a href="/blog.html" class="text-lg hover:text-amber-400 transition-colors">Blog</a>
+            <a href="#contact" class="cta-button bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-full text-lg shadow-lg hover:bg-amber-400">Contact</a>
         </div>
-        <!-- Mobile menu button can be added here if needed -->
     </div>
 </nav>
 
 <header class="hero-section" id="home">
     <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-10" data-aos="fade-in">
-        <!-- UPGRADE: Removed loading="lazy" for immediate loading of the primary hero image -->
         <img src="https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg" alt="Garner Electric Inc. Logo" class="mx-auto mb-12" data-aos="zoom-in">
         <h1 class="text-6xl md:text-8xl font-bold text-white leading-tight mb-4" data-aos="fade-up" data-aos-delay="100">
             <span class="gradient-text">Garner Electric Inc.</span>
@@ -171,7 +169,7 @@
         </div>
     </section>
 
-    <!-- UPGRADE: Replaced icons with photos for better visual storytelling -->
+    <!-- UPGRADE: Replaced icons with new, more relevant photos and alt text -->
     <section class="py-20" id="services">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -180,21 +178,21 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="flex flex-col rounded-xl shadow-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="200" style="background-color: var(--dark-2);">
-                    <img src="https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Residential electrical panel upgrade" class="w-full h-64 object-cover" loading="lazy">
+                    <img src="https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Professional electrician inspecting a residential circuit breaker panel." class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-8 flex-grow">
                         <h3 class="text-3xl font-bold text-white mb-3">Residential Services</h3>
                         <p class="text-lg text-gray-400">From simple repairs in your Millbrook home to complete wiring for new construction in Prattville, we ensure your home is safe and fully powered.</p>
                     </div>
                 </div>
                 <div class="flex flex-col rounded-xl shadow-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="300" style="background-color: var(--dark-2);">
-                    <img src="https://images.pexels.com/photos/544966/pexels-photo-544966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Commercial building electrical installation" class="w-full h-64 object-cover" loading="lazy">
+                    <img src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Well-lit interior of a modern commercial office building." class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-8 flex-grow">
                         <h3 class="text-3xl font-bold text-white mb-3">Commercial & Industrial</h3>
                         <p class="text-lg text-gray-400">Powering your projects with expert estimating, management, and execution for commercial builds in Montgomery, industrial facilities, and more.</p>
                     </div>
                 </div>
                 <div class="flex flex-col rounded-xl shadow-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="400" style="background-color: var(--dark-2);">
-                    <img src="https://images.pexels.com/photos/7569720/pexels-photo-7569720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="EV charger installation for a modern home" class="w-full h-64 object-cover" loading="lazy">
+                    <img src="https://images.pexels.com/photos/8967537/pexels-photo-8967537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Close-up of an electrician installing a modern EV charging station on a home's exterior." class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-8 flex-grow">
                         <h3 class="text-3xl font-bold text-white mb-3">Energy-Efficient Solutions</h3>
                         <p class="text-lg text-gray-400">As LEED AP certified experts, we design and install modern, energy-saving electrical systems like EV chargers and efficient lighting to reduce costs and environmental impact.</p>
@@ -202,7 +200,7 @@
                 </div>
             </div>
             <div class="mt-16 flex flex-col md:flex-row items-center p-8 rounded-xl shadow-2xl" data-aos="fade-right" style="background-color: var(--dark-2);">
-                <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Modern commercial office space serviced by Garner Electric" loading="lazy" class="w-full md:w-1/3 h-auto rounded-lg shadow-lg object-cover">
+                <img src="https://images.pexels.com/photos/6476254/pexels-photo-6476254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A team of professionals reviewing electrical plans on a tablet in an office." loading="lazy" class="w-full md:w-1/3 h-auto rounded-lg shadow-lg object-cover">
                 <div class="md:ml-8 mt-6 md:mt-0">
                     <h3 class="text-3xl font-bold text-white">Expertise for Any Project</h3>
                     <p class="text-lg text-gray-400 mt-2">Led by Master Electrician Harris Garner, our team has the experience to handle complex electrical systems for any commercial or residential project. We are a family-owned business built on a foundation of safety, integrity, and unparalleled expertise, fully licensed and insured to deliver professional, reliable service to every client.</p>
@@ -314,7 +312,8 @@
                 </div>
                 <div class="w-full lg:w-1/2 px-4" data-aos="fade-left">
                     <div class="p-8 rounded-xl shadow-2xl h-full" style="background-color: var(--dark-2);">
-                        <form action="#" method="POST">
+                        <!-- UPGRADE: Added a 'name' attribute to the form for compatibility with services like Netlify Forms -->
+                        <form action="#" method="POST" name="contact">
                             <div class="space-y-6">
                                 <div><label for="name" class="block text-lg font-medium text-gray-300">Full Name</label><input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md shadow-sm py-4 px-5 focus:outline-none focus:ring-amber-500 focus:border-amber-500"></div>
                                  <div><label for="email" class="block text-lg font-medium text-gray-300">Email Address</label><input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md shadow-sm py-4 px-5 focus:outline-none focus:ring-amber-500 focus:border-amber-500"></div>
